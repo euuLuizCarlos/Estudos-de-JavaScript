@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+
+    <style>
+        body{
+            font: normal 15pt Arial;
+            color: rgb(124, 20, 20);
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var nome = window.prompt('Digite seu nome: ');
+        var idade = window.prompt('Digite sua idade: ');
+        document.write(`Olá sr. <strong>${nome}</strong>! Seu nome tem ${nome.length} caracteres e vc tem <strong>${idade} </strong> anos!` + '<br>'); // A propriedade length retorna o número de caracteres em uma string, incluindo espaços.
+        document.write(`O seu nome em maiúsculas é: <strong>${nome.toUpperCase()}</strong>` + '<br>'); // O método toUpperCase() é usado para converter uma string para letras maiúsculas.
+        document.write(`O seu nome em minúsculas é:<strong>${nome.toLowerCase()}</strong>`); // O método toLowerCase() é usado para converter uma string para letras minúsculas.
+    </script>
+
+</body>
+</html>
