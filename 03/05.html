@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos Com DOM</title>
+
+    <style>
+        body {
+            background-color: rgb(142, 107, 238);
+            font: normal 16px/1.5 Arial;
+            color: white;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <h1>Iniciando com DOM!</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Vamos aprender Agora <strong>DOM</strong> em JavaScript !</p>
+    <div class="test">Clique em Mim</div>
+
+    <script>
+       /* var corpo = window.document.body;
+        corpo.style.backgroundColor = 'black';*/
+       var p1 = window.document.getElementsByTagName('p')[1];
+       //var p2 = window.document.getElementsByTagName('p')[1];
+      /* p2.style.color = 'yellow';
+       p1.style.color = 'red';*/
+
+      //document.write(p1.innerHTML); // Escreve o conteúdo do elemento p1 na página
+       //window.alert(p1.innerText); // Exibe o texto do elemento p1 em um alerta
+
+       //innerHTML mostra o conteúdo HTML do elemento, incluindo tags, enquanto innerText mostra apenas o texto visível, sem as tags HTML, já o innerText é mais adequado para obter o texto visível, enquanto o innerHTML é útil para obter ou definir o conteúdo HTML completo de um elemento.
+
+       // getElementsByTagName retorna uma coleção de elementos com a tag especificada, enquanto querySelector retorna o primeiro elemento que corresponde ao seletor CSS fornecido. getElementsByTagName é útil para obter todos os elementos de um tipo específico, enquanto querySelector é mais flexível e pode ser usado para selecionar elementos com base em classes, IDs ou outros seletores CSS.
+
+       /*var d = document.getElementById('test');
+       d.style.background = 'green'; // getElementById é um método que retorna o elemento do DOM que possui o ID especificado. Ele é usado para acessar e manipular um elemento específico na página, permitindo alterar seu estilo, conteúdo ou outros atributos. No exemplo, o elemento com o ID "test" tem seu fundo alterado para verde.*/
+
+       /*var d = document.getElementsByName('test')[0];
+       d.innerText = 'Clicou'; // getElementsByName retorna uma coleção de elementos com o nome especificado, e o índice [0] é usado para acessar o primeiro elemento dessa coleção. O método innerText é então usado para alterar o texto do elemento para "Clicou".*/
+
+       /*var d = document.getElementsByClassName('test')[0];
+       d.innerHTML = '<strong>Clicou</strong>'; // getElementsByClassName retorna uma coleção de elementos com a classe especificada, e o índice [0] é usado para acessar o primeiro elemento dessa coleção. O método innerHTML é então usado para alterar o conteúdo HTML do elemento para "<strong>Clicou</strong>", o que fará com que o texto "Clicou" seja exibido em negrito.*/p1
+
+        var d = document.querySelector('div.test'); //# é usado para selecionar um elemento pelo ID, e 'div#test' indica que estamos selecionando um elemento <div> com o ID "test", ja o . é usado para selecionar um elemento pela classe, e 'div.test' indicaria que estamos selecionando um elemento <div> com a classe "test".
+         d.style.background = 'green';
+
+
+
+    </script>
+    
+</body>
+</html>
