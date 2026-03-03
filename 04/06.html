@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06</title>
+
+    <style>
+        div#começo {
+            font: normal 20px Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div id="começo">
+        Interaja...
+    </div>
+
+    <script>
+
+        var cliques = window.document.getElementById('começo')
+        cliques.addEventListener('click', Clicar)
+        cliques.addEventListener('mouseenter', Entrou)
+        cliques.addEventListener('mouseout', Saiu)
+
+        function Clicar() {
+            cliques.innerText = 'Clicou!'
+            cliques.style.background = 'red'
+        }
+
+        function Entrou() {
+            cliques.innerText = 'Entrou!'
+        }
+
+        function Saiu() {
+            cliques.innerText = 'Saiu!'
+            cliques.style.background = 'green'
+        }
+    
+        
+    </script>
+    
+</body>
+</html>
