@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Trocador de Cores</title>
+    <style>
+        body{
+            font: normal 20px Arial;
+        
+        }
+        input{
+            font: normal 20px Arial;
+            width: 100px;
+        }
+        div#Reset{
+            margin-top: 200px;
+            text-align: center;
+        }
+        div#alinhamento{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>O Trocador de Cores</h1>
+    <div id="alinhamento">
+    <input type="button" value="Verde" onclick="verde()">
+    <input type="button" value="Azul" onclick="azul()">
+    <input type="button" value="Vermelho" onclick="vermelho()">
+    </div>
+
+    <div id="Reset">
+    <input type="button" value="reset" onclick="reset()">
+        </div>
+
+
+    <script>
+        function verde(){
+            window.document.body.style.background = 'green'; // A propriedade background é a responsável por definir a cor de fundo do elemento, nesse caso, do body.
+        }
+        function azul(){
+            window.document.body.style.background = 'blue';
+        }
+        function vermelho(){
+            window.document.body.style.background = 'red';
+        }
+        function reset(){
+            window.document.body.style.background = 'white';
+        }
+    </script>
+    
+    
+</body>
+</html>

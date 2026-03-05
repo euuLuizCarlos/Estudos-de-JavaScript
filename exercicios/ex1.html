@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Boas-Vindas Personalizado</title>
+    <style>
+        body{
+            font: normal 20px Arial;
+        
+        }
+        input{
+            font: normal 20px Arial;
+            width: 200px;
+        }
+        div#Apresentação{
+            margin-top: 20px;
+            font-size: 25px;
+            color: green;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>O Boas-Vindas Personalizado</h1>
+    <input type="text" name="nome" id="nome" placeholder="Digite seu nome"> 
+    <input type="button" value="Enviar" onclick="boasVindas()">
+    <div id="Apresentação"></div>
+
+    <script>
+        function boasVindas(){
+            var nome = window.document.getElementById('nome');
+            var apresentacao = window.document.getElementById('Apresentação');
+            var n = nome.value;
+            apresentacao.innerHTML = `Olá <strong>${n}</strong>, seja bem-vindo ao Mundo JS!`;
+        }
+    </script>
+    
+</body>
+</html>

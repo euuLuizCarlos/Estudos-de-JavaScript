@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+
+    <style>
+        body{
+            font: normal 20px Arial;
+        }
+        input{
+            font: normal 20px Arial;
+            width: 150px;
+        }
+        input[type="button"]{
+            margin-top: 40px;
+            display: block;
+            margin: 0 auto;
+        }
+        div#contador{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 25px;
+            color: blue;
+            text-align: center;
+        }
+        div#incremento{
+            text-align: center;
+            margin-top: 250px;
+            margin-bottom: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contador de Cliques</h1>
+    <div id="incremento">
+
+    <input type="button" value="Clique Aqui!" onclick="contarCliques()">
+    <div id="contador">Número de Cliques: 0</div>
+    <input type="button" value="Clique Reverso!" onclick="contarCliquesReverso()">
+    </div>
+
+    <script>
+        var contador = 0; // Variável para Contar os Cliques
+
+        function contarCliques(){
+            contador++; // Contador de Cliques
+            document.getElementById('contador').innerHTML = `Número de Cliques: ${contador}`;
+        }
+
+        function contarCliquesReverso(){
+            contador--; // Contador de Cliques Reverso
+            document.getElementById('contador').innerHTML = `Número de Cliques: ${contador}`;
+        }
+
+    </script>
+    
+</body>
+</html>
