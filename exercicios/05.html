@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Texto em Tempo Real</title>
+    <style>
+        body{
+            font: normal 20px Arial;
+        }
+        textarea{
+            font: normal 20px Arial;
+            width: 100%;
+            margin-top: 20px;
+        }
+        div#analise, div#Maiusculo{
+            margin-top: 20px;
+            font-size: 25px;
+            color: blue;
+        }
+        </style>
+</head>
+<body>
+
+    <h1>Analisador de Texto em Tempo Real</h1>
+    <textarea id="texto" rows="10" cols="50" placeholder="Digite seu texto aqui..." oninput="analisarTexto()"></textarea>
+    <div id="analise"></div>
+    <div id="Maiusculo"></div>
+
+    <script>
+        function analisarTexto(){
+            var texto = document.getElementById('texto').value;
+            var palavras = texto.trim().split(/\s+/).filter(function(palavra){ return palavra.length > 0; });
+            var numeroDePalavras = palavras.length;
+            var numeroDeCaracteres = texto.length;
+            var textoEmMaiusculo = texto.toUpperCase();
+            var campoTexto = document.getElementById('texto');
+            var limiteCaracteres = 50;
+
+            if (campoTexto.value.length > limiteCaracteres){
+                campoTexto.style.borderColor = 'red';
+                campoTexto.style.color = 'red';
+                campoTexto.style.outline = 'none';
+            } else {
+                campoTexto.style.borderColor = '';
+                campoTexto.style.color = '';
+                campoTexto.style.outline = '';
+            }
+
+            document.getElementById('analise').innerHTML = `
+                <p>Número de Palavras: ${numeroDePalavras}</p>
+                <p>Número de Caracteres: ${numeroDeCaracteres}</p>
+            `;
+
+            document.getElementById('Maiusculo').innerHTML = `
+                <p>Texto em Maiúsculo: ${textoEmMaiusculo}</p>
+            `;
+            
+            
+        }
+    </script>
+    
+</body>
+</html>
